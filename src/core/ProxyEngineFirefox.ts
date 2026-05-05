@@ -247,7 +247,7 @@ export class ProxyEngineFirefox {
 
 							DiagDebug?.trace("FF.handleProxyRequest <ProxyPerOrigin>", 't=' + proxyLog.tabId, `OriginTab: ${tabData.url}`, proxyLog.url, SmartProfileType[activeProfileType]);
 
-							// TODO: since we do not return here anymore, check effects of `proxyLog.proxied = true`
+							// TODO: this branch still returns here; check the effects of `proxyLog.proxied = true` for this early-return path
 							return ProxyEngineFirefox.getResultProxyInfo(currentProxyServer);
 						}
 					}
